@@ -12,6 +12,7 @@ import java.util.WeakHashMap;
 
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
+
 import com.qile.ui.LoaderStyle;
 
 /**
@@ -25,6 +26,9 @@ public class RestClientBuilder {
     private IFailure mFailure = null;
     private IError mError = null;
     private IRequest mRequest = null;
+    private String mDownLoadDir = null;
+    private String mExtension = null;
+    private String mName = null;
     private RequestBody mBody = null;
     private File mFile = null;
     private Context mContext = null;
@@ -46,6 +50,21 @@ public class RestClientBuilder {
 
     public final RestClientBuilder onRequest(IRequest request) {
         this.mRequest = request;
+        return this;
+    }
+
+    public final RestClientBuilder downloadDir(String downLoadDir) {
+        this.mDownLoadDir = downLoadDir;
+        return this;
+    }
+
+    public final RestClientBuilder extension(String extension) {
+        this.mExtension = extension;
+        return this;
+    }
+
+    public final RestClientBuilder name(String name) {
+        this.mName = name;
         return this;
     }
 
@@ -74,26 +93,30 @@ public class RestClientBuilder {
         return this;
     }
 
-    public final RestClientBuilder loader(Context context,LoaderStyle style){
+    public final RestClientBuilder loader(Context context, LoaderStyle style) {
         this.mContext = context;
         this.mStyle = style;
         return this;
     }
-    public final RestClientBuilder file(File file){
+
+    public final RestClientBuilder file(File file) {
         this.mFile = file;
         return this;
     }
-    public final RestClientBuilder file(String file){
+
+    public final RestClientBuilder file(String file) {
         this.mFile = new File(file);
         return this;
     }
-    public final RestClientBuilder loader(Context context){
+
+    public final RestClientBuilder loader(Context context) {
         this.mContext = context;
         this.mStyle = LoaderStyle.BallClipRotateIndicator;
         return this;
     }
 
     public final RestClient bulid() {
-        return new RestClient(mUrl, PARAMS, mSuccess, mFailure, mError, mRequest, mBody,mFile,mContext,mStyle);
+        return new RestClient(mUrl, PARAMS, mSuccess, mFailure, mError, mRequest,
+                mDownLoadDir, mExtension, mName, mBody, mFile, mContext, mStyle);
     }
 }

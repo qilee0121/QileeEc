@@ -18,6 +18,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.http.Multipart;
 
+import com.qile.net.download.DownloadHandler;
 import com.qile.ui.LatteLoader;
 import com.qile.ui.LoaderStyle;
 
@@ -34,6 +35,9 @@ public class RestClient {
     private final IFailure FAILURE;
     private final IError ERROR;
     private final IRequest REQUEST;
+    private final String DOWNLOAD_DIR;
+    private final String EXTENSION;
+    private final String NAME;
     private final RequestBody BODY;
     private final File FILE;
     private final Context CONTEXT;
@@ -45,6 +49,9 @@ public class RestClient {
                       IFailure failure,
                       IError error,
                       IRequest request,
+                      String downloadDir,
+                      String extension,
+                      String name,
                       RequestBody body,
                       File file,
                       Context cotext,
@@ -55,6 +62,9 @@ public class RestClient {
         this.FAILURE = failure;
         this.ERROR = error;
         this.REQUEST = request;
+        this.DOWNLOAD_DIR = downloadDir;
+        this.EXTENSION = extension;
+        this.NAME = name;
         this.BODY = body;
         this.FILE = file;
         this.CONTEXT = cotext;
@@ -143,5 +153,9 @@ public class RestClient {
 
     public final void delete() {
         request(HttpMethod.DELETE);
+    }
+
+    public final void download(){
+        new DownloadHandler(URL,SUCCESS,FAILURE,ERROR,REQUEST,DOWNLOAD_DIR,EXTENSION,NAME).handleDownload();
     }
 }
