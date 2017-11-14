@@ -7,6 +7,7 @@ import com.qile.net.callback.IFailure;
 import com.qile.net.callback.IRequest;
 import com.qile.net.callback.ISuccess;
 
+import java.io.File;
 import java.util.WeakHashMap;
 
 import okhttp3.MediaType;
@@ -25,6 +26,7 @@ public class RestClientBuilder {
     private IError mError = null;
     private IRequest mRequest = null;
     private RequestBody mBody = null;
+    private File mFile = null;
     private Context mContext = null;
     private LoaderStyle mStyle = null;
 
@@ -77,7 +79,14 @@ public class RestClientBuilder {
         this.mStyle = style;
         return this;
     }
-
+    public final RestClientBuilder file(File file){
+        this.mFile = file;
+        return this;
+    }
+    public final RestClientBuilder file(String file){
+        this.mFile = new File(file);
+        return this;
+    }
     public final RestClientBuilder loader(Context context){
         this.mContext = context;
         this.mStyle = LoaderStyle.BallClipRotateIndicator;
@@ -85,6 +94,6 @@ public class RestClientBuilder {
     }
 
     public final RestClient bulid() {
-        return new RestClient(mUrl, PARAMS, mSuccess, mFailure, mError, mRequest, mBody,mContext,mStyle);
+        return new RestClient(mUrl, PARAMS, mSuccess, mFailure, mError, mRequest, mBody,mFile,mContext,mStyle);
     }
 }
