@@ -1,9 +1,8 @@
-package app;
+package com.qile.app;
 
 import android.content.Context;
 
 import java.util.HashMap;
-import java.util.Objects;
 
 /**
  * Created by qilee on 2017/11/6.

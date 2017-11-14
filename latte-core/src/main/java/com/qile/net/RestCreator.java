@@ -1,11 +1,11 @@
-package net;
+package com.qile.net;
 
 
 import java.util.WeakHashMap;
 import java.util.concurrent.TimeUnit;
 
-import app.ConfigType;
-import app.Latte;
+import com.qile.app.ConfigType;
+import com.qile.app.Latte;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.scalars.ScalarsConverterFactory;

@@ -1,4 +1,4 @@
-package delegates;
+package com.qile.delegates;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

@@ -1,20 +1,17 @@
-package ui;
+package com.qile.ui;
 
 import android.content.Context;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatDialog;
 import android.view.Gravity;
 import android.view.Window;
 import android.view.WindowManager;
 
 import com.wang.avi.AVLoadingIndicatorView;
-import com.wang.avi.Indicator;
 
 import java.util.ArrayList;
-import java.util.WeakHashMap;
 
 import qilee.cn.latte.R;
-import util.DimeUtil;
+import com.qile.util.DimeUtil;
 
 /**
  * Created by qilee on 2017/11/7.

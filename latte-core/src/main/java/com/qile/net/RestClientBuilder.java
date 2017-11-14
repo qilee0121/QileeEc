@@ -1,19 +1,17 @@
-package net;
+package com.qile.net;
 
 import android.content.Context;
 
-import net.callback.IError;
-import net.callback.IFailure;
-import net.callback.IRequest;
-import net.callback.ISuccess;
+import com.qile.net.callback.IError;
+import com.qile.net.callback.IFailure;
+import com.qile.net.callback.IRequest;
+import com.qile.net.callback.ISuccess;
 
-import java.util.Map;
 import java.util.WeakHashMap;
 
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
-import ui.LatteLoader;
-import ui.LoaderStyle;
+import com.qile.ui.LoaderStyle;
 
 /**
  * Created by qilee on 2017/11/6.

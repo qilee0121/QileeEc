@@ -1,4 +1,4 @@
-package ui;
+package com.qile.ui;
 
 import android.content.Context;
 

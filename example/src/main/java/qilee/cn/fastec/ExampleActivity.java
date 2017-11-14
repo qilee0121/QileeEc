@@ -1,10 +1,7 @@
 package qilee.cn.fastec;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
-import activities.ProxyActivity;
-import delegates.LatteDelegate;
+import com.qile.activities.ProxyActivity;
+import com.qile.delegates.LatteDelegate;
 
 public class ExampleActivity extends ProxyActivity {
 

@@ -4,7 +4,7 @@ import android.app.Application;
 
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
 
-import app.Latte;
+import com.qile.app.Latte;
 import ec.icon.IconEcModule;
 
 /**

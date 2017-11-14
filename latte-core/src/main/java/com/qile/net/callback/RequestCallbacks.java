@@ -1,4 +1,4 @@
-package net.callback;
+package com.qile.net.callback;
 
 
 import android.os.Handler;
@@ -6,9 +6,8 @@ import android.os.Handler;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.http.FieldMap;
-import ui.LatteLoader;
-import ui.LoaderStyle;
+import com.qile.ui.LatteLoader;
+import com.qile.ui.LoaderStyle;
 
 /**
  * Created by qilee on 2017/11/6.

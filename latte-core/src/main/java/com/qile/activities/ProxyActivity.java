@@ -1,11 +1,10 @@
-package activities;
+package com.qile.activities;
 
 import android.os.Bundle;
-import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.ContentFrameLayout;
 
-import delegates.LatteDelegate;
+import com.qile.delegates.LatteDelegate;
 import me.yokeyword.fragmentation.SupportActivity;
 import qilee.cn.latte.R;
 

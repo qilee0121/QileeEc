@@ -1,17 +1,15 @@
 package qilee.cn.fastec;
 
 import android.os.Bundle;
-import android.os.TokenWatcher;
 import android.support.annotation.Nullable;
 import android.view.View;
-import android.widget.Toast;
 
-import net.RestClient;
-import net.callback.IError;
-import net.callback.IFailure;
-import net.callback.ISuccess;
+import com.qile.net.RestClient;
+import com.qile.net.callback.IError;
+import com.qile.net.callback.IFailure;
+import com.qile.net.callback.ISuccess;
 
-import delegates.LatteDelegate;
+import com.qile.delegates.LatteDelegate;
 
 /**
  * Created by qilee on 2017/11/6.

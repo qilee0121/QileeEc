@@ -1,21 +1,20 @@
-package net;
+package com.qile.net;
 
 import android.content.Context;
-import android.widget.MultiAutoCompleteTextView;
 
-import net.callback.IError;
-import net.callback.IFailure;
-import net.callback.IRequest;
-import net.callback.ISuccess;
-import net.callback.RequestCallbacks;
+import com.qile.net.callback.IError;
+import com.qile.net.callback.IFailure;
+import com.qile.net.callback.IRequest;
+import com.qile.net.callback.ISuccess;
+import com.qile.net.callback.RequestCallbacks;
 
 import java.util.Map;
 
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
-import ui.LatteLoader;
-import ui.LoaderStyle;
+import com.qile.ui.LatteLoader;
+import com.qile.ui.LoaderStyle;
 
 
 /**

@@ -1,6 +1,5 @@
-package app;
+package com.qile.app;
 
-import com.joanzapata.iconify.Icon;
 import com.joanzapata.iconify.IconFontDescriptor;
 import com.joanzapata.iconify.Iconify;
 

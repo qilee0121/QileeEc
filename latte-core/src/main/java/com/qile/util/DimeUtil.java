@@ -1,10 +1,9 @@
-package util;
+package com.qile.util;
 
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
-import android.view.Display;
 
-import app.Latte;
+import com.qile.app.Latte;
 
 /**
  * Created by qilee on 2017/11/7.
